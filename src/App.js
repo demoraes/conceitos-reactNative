@@ -13,7 +13,7 @@ import api from "./services/api";
 
 export default function App() {
   const [projetcs, setProjects] = useState([]);
-  //const [likes, setLikes] = useState([]);
+  const [likes, setLikes] = useState([]);
 
   useEffect(() => {
     async function loadProjects() {
@@ -40,7 +40,9 @@ export default function App() {
       }
     });
 
+  
     setProjects(repositoryUpdate);
+    setLikes(repositoryUpdate);
   }
 
   return (
